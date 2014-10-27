@@ -15,15 +15,15 @@ iOS tools to test readability and comprehension difficulty for contemporary Engl
 * [Gunning Fog Index](http://en.wikipedia.org/wiki/Gunning_fog_index)
 * [SMOG](http://en.wikipedia.org/wiki/SMOG)
 
-## Dependencies
+### Dependencies
 
 * [objC-syllable-counter](https://github.com/bracken-dev/objC-syllable-counter.git) with RegexKitLite (included) and libicucore
 
-## Usage
+### Usage
 
 See included example application.
 
-## License
+### License
 
 The MIT License (MIT)
 
