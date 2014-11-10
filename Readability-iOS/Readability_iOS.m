@@ -55,7 +55,7 @@
     CGFloat totalComplexWords = [Readability_iOS countComplexWordsInString:string];
     
     // Formula for http://en.wikipedia.org/wiki/Gunning_fog_index
-    CGFloat score = 0.4f * ( (totalWords / totalSentences) + 100 * (totalComplexWords /  totalWords) );
+    CGFloat score = 0.4f * ( (totalWords / totalSentences) + 100.0f * (totalComplexWords /  totalWords) );
     
     return [Readability_iOS roundFloat:score places:1];
 }
@@ -65,7 +65,7 @@
     CGFloat totalSentences = [Readability_iOS count:NSStringEnumerationBySentences inString:string];
     
     // Formula from http://en.wikipedia.org/wiki/SMOG
-    CGFloat score = 1.0430f * sqrtf(totalPolysyllables * (30 / totalSentences) + 3.1291f);
+    CGFloat score = 1.0430f * sqrtf(totalPolysyllables * (30.0f / totalSentences) + 3.1291f);
     
     return [Readability_iOS roundFloat:score places:1];
 }
@@ -104,7 +104,7 @@
 }
 
 + (BOOL)isWordPolysyllable:(NSString *)word excludeCommonSuffixes:(BOOL)excludeCommonSuffixes {
-    __block BOOL polysyllable = NO;
+    BOOL polysyllable = NO;
     
     if ([SyllableCounter syllableCountForWord:word] > 2) {
         
