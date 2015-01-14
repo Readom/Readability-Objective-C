@@ -3,7 +3,7 @@
 //  Readability-iOS Example
 //
 //  Created by Bracken Spencer <bracken.spencer@gmail.com>.
-//  Copyright (c) 2014 Bracken Spencer. All rights reserved.
+//  Copyright (c) 2014-2015 Bracken Spencer. All rights reserved.
 //
 
 #import "ViewController.h"
@@ -26,11 +26,6 @@
     [super viewDidLoad];
     
     [self textViewDidChange:self.textView];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - UITextViewDelegate
