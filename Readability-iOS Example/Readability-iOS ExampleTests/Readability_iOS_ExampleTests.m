@@ -17,13 +17,13 @@
 - (NSDecimalNumber *)roundFloat:(CGFloat)aFloat places:(NSInteger)places;
 - (NSUInteger)wordsInString:(NSString *)string;
 - (NSUInteger)sentencesInString:(NSString *)string;
-- (NSUInteger)countAlphanumericCharactersInString:(NSString *)string;
+- (NSUInteger)alphanumericCharactersInString:(NSString *)string;
 - (NSString *)alphanumericString:(NSString *)string;
 - (NSString *)cleanupWhiteSpace:(NSString *)string;
 - (BOOL)isWordPolysyllable:(NSString *)word excludeCommonSuffixes:(BOOL)excludeCommonSuffixes;
-- (NSUInteger)countPolysyllablesInString:(NSString *)string excludeCommonSuffixes:(BOOL)excludeCommonSuffixes;
+- (NSUInteger)polysyllableWordsInString:(NSString *)string excludeCommonSuffixes:(BOOL)excludeCommonSuffixes;
 - (BOOL)isWordCapitalized:(NSString *)word;
-- (NSUInteger)countComplexWordsInString:(NSString *)string;
+- (NSUInteger)complexWordsInString:(NSString *)string;
 
 @end
 
@@ -50,7 +50,7 @@
     
     //                              read-able.com   readability-score.com   Readability-iOS-Objective-C
     // Automated Readability Index: 12.1            12.1                    12.1
-    //         Flesch Reading Ease: 65.4            65.4                    63.2 ✗
+    //         Flesch Reading Ease: 65.4            65.4                    64.8 ✗
     //  Flesch–Kincaid Grade Level: 10.9            10.9                    11.0 ✗
     //           Gunning Fog Score: 13.8            13.8                    12.6 ✗
     //                  SMOG Index: 8.3             8.3                     8.3
@@ -72,7 +72,7 @@
 - (void)testReadabilityString2 {
     XCTAssert([Readability_iOS automatedReadabilityIndexForString:self.testString2].doubleValue == 12.1);
     XCTAssert([Readability_iOS fleschKincaidGradeLevelForString:self.testString2].doubleValue == 11.0); // TODO optimize
-    XCTAssert([Readability_iOS fleschReadingEaseForString:self.testString2].doubleValue == 63.2); // TODO optimize
+    XCTAssert([Readability_iOS fleschReadingEaseForString:self.testString2].doubleValue == 64.8); // TODO optimize
     XCTAssert([Readability_iOS gunningFogScoreForString:self.testString2].doubleValue == 12.6); // TODO optimize
     XCTAssert([Readability_iOS smogIndexForString:self.testString2].doubleValue == 8.3);
 }
@@ -96,8 +96,8 @@
 }
 
 - (void)testCountAlphanumericCharactersInString {
-    XCTAssertEqual([self.readability countAlphanumericCharactersInString:self.testString1], 68);
-    XCTAssertEqual([self.readability countAlphanumericCharactersInString:self.testString2], 1149);
+    XCTAssertEqual([self.readability alphanumericCharactersInString:self.testString1], 68);
+    XCTAssertEqual([self.readability alphanumericCharactersInString:self.testString2], 1149);
 }
 
 - (void)testAlphanumericString {
@@ -115,11 +115,11 @@
 }
 
 - (void)testCountPolysyllablesInString {
-    XCTAssertEqual([self.readability countPolysyllablesInString:self.testString1 excludeCommonSuffixes:NO], 4);
-    XCTAssertEqual([self.readability countPolysyllablesInString:self.testString1 excludeCommonSuffixes:YES], 4);
+    XCTAssertEqual([self.readability polysyllableWordsInString:self.testString1 excludeCommonSuffixes:NO], 4);
+    XCTAssertEqual([self.readability polysyllableWordsInString:self.testString1 excludeCommonSuffixes:YES], 4);
     
-    XCTAssertEqual([self.readability countPolysyllablesInString:self.testString2 excludeCommonSuffixes:NO], 20);
-    XCTAssertEqual([self.readability countPolysyllablesInString:self.testString2 excludeCommonSuffixes:YES], 12);
+    XCTAssertEqual([self.readability polysyllableWordsInString:self.testString2 excludeCommonSuffixes:NO], 20);
+    XCTAssertEqual([self.readability polysyllableWordsInString:self.testString2 excludeCommonSuffixes:YES], 12);
 }
 
 - (void)testIsWordCapitalized {
@@ -133,8 +133,8 @@
 }
 
 - (void)testCountComplexWordsInString {
-    XCTAssertEqual([self.readability countComplexWordsInString:self.testString1], 3);
-    XCTAssertEqual([self.readability countComplexWordsInString:self.testString2], 12); // TODO optimize
+    XCTAssertEqual([self.readability complexWordsInString:self.testString1], 3);
+    XCTAssertEqual([self.readability complexWordsInString:self.testString2], 12); // TODO optimize
 }
 
 #pragma mark - SyllableCounter
@@ -148,7 +148,6 @@
     XCTAssertEqual([SyllableCounter syllableCountForWord:@"a"], 1);
     XCTAssertEqual([SyllableCounter syllableCountForWord:@"hybrid"], 2);
     XCTAssertEqual([SyllableCounter syllableCountForWord:@"of"], 1);
-    XCTAssertEqual([SyllableCounter syllableCountForWord:@"a"], 1);
     XCTAssertEqual([SyllableCounter syllableCountForWord:@"mammal"], 2);
     XCTAssertEqual([SyllableCounter syllableCountForWord:@"and"], 1);
     XCTAssertEqual([SyllableCounter syllableCountForWord:@"reptilian"], 4);

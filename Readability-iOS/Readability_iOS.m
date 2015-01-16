@@ -17,7 +17,7 @@
     
     CGFloat totalWords = [readability wordsInString:string];
     CGFloat totalSentences = [readability sentencesInString:string];
-    CGFloat totalAlphanumericCharacters = [readability countAlphanumericCharactersInString:string];
+    CGFloat totalAlphanumericCharacters = [readability alphanumericCharactersInString:string];
     
     // Formula from http://en.wikipedia.org/wiki/Automated_Readability_Index
     CGFloat score = 4.71f * (totalAlphanumericCharacters / totalWords) + 0.5f * (totalWords / totalSentences) - 21.43f;
@@ -44,7 +44,8 @@
     
     CGFloat totalWords = [readability wordsInString:string];
     CGFloat totalSentences = [readability sentencesInString:string];
-    CGFloat totalSyllables = [SyllableCounter syllableCountForWords:string];
+    NSString *alphaNumeric = [readability alphanumericString:string];
+    CGFloat totalSyllables = [SyllableCounter syllableCountForWords:alphaNumeric];
     
     // Formula from http://en.wikipedia.org/wiki/Flesch–Kincaid_readability_tests
     CGFloat score = 206.835f - 1.015f * (totalWords / totalSentences) - 84.6f * (totalSyllables / totalWords);
@@ -57,9 +58,9 @@
     
     CGFloat totalWords = [readability wordsInString:string];
     CGFloat totalSentences = [readability sentencesInString:string];
-    CGFloat totalComplexWords = [readability countComplexWordsInString:string];
+    CGFloat totalComplexWords = [readability complexWordsInString:string];
     
-    // Formula for http://en.wikipedia.org/wiki/Gunning_fog_index
+    // Formula from http://en.wikipedia.org/wiki/Gunning_fog_index
     CGFloat score = 0.4f * ( (totalWords / totalSentences) + 100 * (totalComplexWords /  totalWords) );
     
     return [readability roundFloat:score places:1];
@@ -69,10 +70,10 @@
     Readability_iOS *readability = [[Readability_iOS alloc] init];
     
     CGFloat totalSentences = [readability sentencesInString:string];
-    CGFloat totalPolysyllables = [readability countPolysyllablesInString:string excludeCommonSuffixes:NO];
+    CGFloat totalPolysyllables = [readability polysyllableWordsInString:string excludeCommonSuffixes:NO];
     
     // Formula from http://en.wikipedia.org/wiki/SMOG
-    CGFloat score = 1.0430f * sqrtf(totalPolysyllables * (30 / totalSentences) + 3.1291f);
+    CGFloat score = 1.043f * sqrtf(totalPolysyllables * (30 / totalSentences) + 3.1291f);
     
     return [readability roundFloat:score places:1];
 }
@@ -116,7 +117,7 @@
     return count;
 }
 
-- (NSUInteger)countAlphanumericCharactersInString:(NSString *)string {
+- (NSUInteger)alphanumericCharactersInString:(NSString *)string {
     NSCharacterSet *charactersToRemove = [NSCharacterSet alphanumericCharacterSet].invertedSet;
     
     return [[string componentsSeparatedByCharactersInSet:charactersToRemove] componentsJoinedByString:@""].length;
@@ -162,7 +163,7 @@
     return polysyllable;
 }
 
-- (NSUInteger)countPolysyllablesInString:(NSString *)string excludeCommonSuffixes:(BOOL)excludeCommonSuffixes {
+- (NSUInteger)polysyllableWordsInString:(NSString *)string excludeCommonSuffixes:(BOOL)excludeCommonSuffixes {
     Readability_iOS *readability = [[Readability_iOS alloc] init];
     
     __block NSUInteger count = 0;
@@ -184,7 +185,7 @@
     return [[NSCharacterSet uppercaseLetterCharacterSet] characterIsMember:[word characterAtIndex:0]];
 }
 
-- (NSUInteger)countComplexWordsInString:(NSString *)string {
+- (NSUInteger)complexWordsInString:(NSString *)string {
     Readability_iOS *readability = [[Readability_iOS alloc] init];
     
     __block NSUInteger count = 0;
@@ -199,7 +200,7 @@
                                 BOOL familiarJargon = NO; // TODO
                                 BOOL compound = NO; // TODO
                                 
-                                if (polysyllable && !properNoun && !familiarJargon && !compound) {
+                                if (polysyllable && properNoun == NO && familiarJargon == NO && compound == NO) {
                                     count++;
                                 }
                             }];
