@@ -1,6 +1,6 @@
 //
 //  Readability.m
-//  Readability-Objective-C Example
+//  Readability-Objective-C
 //
 //  Created by Bracken Spencer <bracken.spencer@gmail.com>.
 //  Copyright (c) 2014-2015 Bracken Spencer. All rights reserved.
@@ -22,6 +22,19 @@
     // Formula from http://en.wikipedia.org/wiki/Automated_Readability_Index
     CGFloat score = 4.71f * (totalAlphanumericCharacters / totalWords) + 0.5f * (totalWords / totalSentences) - 21.43f;
 
+    return [readability roundFloat:score places:1];
+}
+
++ (NSDecimalNumber *)colemanLiauIndexForString:(NSString *)string {
+    Readability *readability = [[Readability alloc] init];
+    
+    CGFloat totalWords = [readability wordsInString:string];
+    CGFloat totalSentences = [readability sentencesInString:string];
+    CGFloat totalAlphanumericCharacters = [readability alphanumericCharactersInString:string];
+    
+    // Formula from http://en.wikipedia.org/wiki/Coleman–Liau_index
+    CGFloat score = 5.88f * (totalAlphanumericCharacters / totalWords) - 0.296f * (totalSentences / totalWords) - 15.8f;
+    
     return [readability roundFloat:score places:1];
 }
 

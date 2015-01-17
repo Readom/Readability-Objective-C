@@ -1,19 +1,27 @@
 //
 //  Readability.h
-//  Readability-Objective-C Example
+//  Readability-Objective-C
 //
 //  Created by Bracken Spencer <bracken.spencer@gmail.com>.
 //  Copyright (c) 2014-2015 Bracken Spencer. All rights reserved.
 //
 
+// Automated Readability Index: automatedReadabilityIndexForString
+//          Coleman–Liau Index: colemanLiauIndexForString
+//  Flesch-Kincaid Grade Level: fleschKincaidGradeLevelForString
+//         Flesch Reading Ease: fleschReadingEaseForString
+//           Gunning Fog Index: gunningFogScoreForString
+//                  SMOG Index: smogIndexForString
+
 @import Foundation;
 
 @interface Readability : NSObject
 
-+ (NSDecimalNumber *)automatedReadabilityIndexForString:(NSString *)string; // Automated Readability Index
-+ (NSDecimalNumber *)fleschKincaidGradeLevelForString:(NSString *)string; // Flesch-Kincaid Grade Level
-+ (NSDecimalNumber *)fleschReadingEaseForString:(NSString *)string; // Flesch Reading Ease
-+ (NSDecimalNumber *)gunningFogScoreForString:(NSString *)string; // Gunning Fog Index
-+ (NSDecimalNumber *)smogIndexForString:(NSString *)string; // SMOG
++ (NSDecimalNumber *)automatedReadabilityIndexForString:(NSString *)string;
++ (NSDecimalNumber *)colemanLiauIndexForString:(NSString *)string;
++ (NSDecimalNumber *)fleschKincaidGradeLevelForString:(NSString *)string;
++ (NSDecimalNumber *)fleschReadingEaseForString:(NSString *)string;
++ (NSDecimalNumber *)gunningFogScoreForString:(NSString *)string;
++ (NSDecimalNumber *)smogIndexForString:(NSString *)string;
 
 @end

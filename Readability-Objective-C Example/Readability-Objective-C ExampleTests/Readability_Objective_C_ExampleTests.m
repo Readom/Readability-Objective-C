@@ -40,19 +40,21 @@
 - (void)setUp {
     [super setUp];
 
-    //                              read-able.com   readability-score.com   Readability-iOS-Objective-C
+    //                              read-able.com   readability-score.com   Readability-iOS-Objective-C 14.9
     // Automated Readability Index: 9.7             9.7                     9.7
-    //         Flesch Reading Ease: 24.4            30.9 ✗                  24.4
-    //  Flesch–Kincaid Grade Level: 13.1            12.2 ✗                  13.1
-    //           Gunning Fog Score: 14.4            11.4 ✗                  14.4
-    //                  SMOG Index: 11.6            10.1 ✗                  11.6
+    //          Coleman–Liau Index: 15.0            15.0                    14.9
+    //         Flesch Reading Ease: 24.4            30.9                    24.4
+    //  Flesch–Kincaid Grade Level: 13.1            12.2                    13.1
+    //           Gunning Fog Score: 14.4            11.4                    14.4
+    //                  SMOG Index: 11.6            10.1                    11.6
     self.testString1 = @"The Australian platypus is seemingly a hybrid of a mammal and reptilian creature.";
     
     //                              read-able.com   readability-score.com   Readability-iOS-Objective-C
     // Automated Readability Index: 12.1            12.1                    12.1
-    //         Flesch Reading Ease: 65.4            65.4                    64.8 ✗
-    //  Flesch–Kincaid Grade Level: 10.9            10.9                    11.0 ✗
-    //           Gunning Fog Score: 13.8            13.8                    12.6 ✗
+    //          Coleman–Liau Index: 9.2             9.2                     9.1
+    //         Flesch Reading Ease: 65.4            65.4                    64.8
+    //  Flesch–Kincaid Grade Level: 10.9            10.9                    11.0
+    //           Gunning Fog Score: 13.8            13.8                    12.6
     //                  SMOG Index: 8.3             8.3                     8.3
     self.testString2 = @"Four score and seven years ago our fathers brought forth on this continent a new nation, conceived in liberty, and dedicated to the proposition that all men are created equal. Now we are engaged in a great civil war, testing whether that nation, or any nation so conceived and so dedicated, can long endure. We are met on a great battlefield of that war. We have come to dedicate a portion of that field, as a final resting place for those who here gave their lives that that nation might live. It is altogether fitting and proper that we should do this. But, in a larger sense, we can not dedicate, we can not consecrate, we can not hallow this ground. The brave men, living and dead, who struggled here, have consecrated it, far above our poor power to add or detract. The world will little note, nor long remember what we say here, but it can never forget what they did here. It is for us the living, rather, to be dedicated here to the unfinished work which they who fought here have thus far so nobly advanced. It is rather for us to be here dedicated to the great task remaining before us -- that from these honored dead we take increased devotion to that cause for which they gave the last full measure of devotion -- that we here highly resolve that these dead shall not have died in vain -- that this nation, under God, shall have a new birth of freedom -- and that government of the people, by the people, for the people, shall not perish from the earth.";
     
@@ -63,6 +65,7 @@
 
 - (void)testReadabilityString1 {
     XCTAssert([Readability automatedReadabilityIndexForString:self.testString1].doubleValue == 9.7);
+    XCTAssert([Readability colemanLiauIndexForString:self.testString1].doubleValue == 14.9);
     XCTAssert([Readability fleschKincaidGradeLevelForString:self.testString1].doubleValue == 13.1);
     XCTAssert([Readability fleschReadingEaseForString:self.testString1].doubleValue == 24.4);
     XCTAssert([Readability gunningFogScoreForString:self.testString1].doubleValue == 14.4);
@@ -71,9 +74,10 @@
 
 - (void)testReadabilityString2 {
     XCTAssert([Readability automatedReadabilityIndexForString:self.testString2].doubleValue == 12.1);
-    XCTAssert([Readability fleschKincaidGradeLevelForString:self.testString2].doubleValue == 11.0); // TODO optimize
-    XCTAssert([Readability fleschReadingEaseForString:self.testString2].doubleValue == 64.8); // TODO optimize
-    XCTAssert([Readability gunningFogScoreForString:self.testString2].doubleValue == 12.6); // TODO optimize
+    XCTAssert([Readability colemanLiauIndexForString:self.testString2].doubleValue == 9.1);
+    XCTAssert([Readability fleschKincaidGradeLevelForString:self.testString2].doubleValue == 11.0);
+    XCTAssert([Readability fleschReadingEaseForString:self.testString2].doubleValue == 64.8);
+    XCTAssert([Readability gunningFogScoreForString:self.testString2].doubleValue == 12.6);
     XCTAssert([Readability smogIndexForString:self.testString2].doubleValue == 8.3);
 }
 
@@ -134,7 +138,7 @@
 
 - (void)testCountComplexWordsInString {
     XCTAssertEqual([self.readability complexWordsInString:self.testString1], 3);
-    XCTAssertEqual([self.readability complexWordsInString:self.testString2], 12); // TODO optimize
+    XCTAssertEqual([self.readability complexWordsInString:self.testString2], 12);
 }
 
 #pragma mark - SyllableCounter
@@ -159,7 +163,7 @@
     NSString *cleaned2 = [self.readability alphanumericString:self.testString2];
                    
     XCTAssertEqual([SyllableCounter syllableCountForWords:cleaned1], 26);
-    XCTAssertEqual([SyllableCounter syllableCountForWords:cleaned2], 367); // TODO optimize
+    XCTAssertEqual([SyllableCounter syllableCountForWords:cleaned2], 367);
 }
 
 @end

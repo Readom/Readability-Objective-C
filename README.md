@@ -10,10 +10,11 @@ Metrics to determine readability and comprehension difficulty for contemporary E
 ##### Formulas Included
 
 * [Automated Readability Index](http://en.wikipedia.org/wiki/Automated_Readability_Index)
+* [Coleman–Liau Index](http://en.wikipedia.org/wiki/Coleman–Liau_index)
 * [Flesch-Kincaid Grade Level](http://en.wikipedia.org/wiki/Flesch–Kincaid_readability_tests)
 * [Flesch Reading Ease](http://en.wikipedia.org/wiki/Flesch–Kincaid_readability_tests)
 * [Gunning Fog Index](http://en.wikipedia.org/wiki/Gunning_fog_index)
-* [SMOG](http://en.wikipedia.org/wiki/SMOG)
+* [SMOG Index](http://en.wikipedia.org/wiki/SMOG)
 
 ### Dependencies
 
