@@ -1,6 +1,6 @@
 //
-//  Readability_iOS_ExampleTests.m
-//  Readability-iOS ExampleTests
+//  Readability_Objective_C_ExampleTests.m
+//  Readability-Objective-C Example
 //
 //  Created by Bracken Spencer <bracken.spencer@gmail.com>.
 //  Copyright (c) 2014-2015 Bracken Spencer. All rights reserved.
@@ -9,10 +9,10 @@
 @import UIKit;
 @import XCTest;
 
-#import "Readability_iOS.h"
+#import "Readability.h"
 #import "SyllableCounter.h"
 
-@interface Readability_iOS (Test)
+@interface Readability (Test)
 
 - (NSDecimalNumber *)roundFloat:(CGFloat)aFloat places:(NSInteger)places;
 - (NSUInteger)wordsInString:(NSString *)string;
@@ -27,15 +27,15 @@
 
 @end
 
-@interface Readability_iOS_ExampleTests : XCTestCase
+@interface Readability_Objective_C_ExampleTests : XCTestCase
 
 @property (nonatomic, strong) NSString *testString1;
 @property (nonatomic, strong) NSString *testString2;
-@property (nonatomic, strong) Readability_iOS *readability;
+@property (nonatomic, strong) Readability *readability;
 
 @end
 
-@implementation Readability_iOS_ExampleTests
+@implementation Readability_Objective_C_ExampleTests
 
 - (void)setUp {
     [super setUp];
@@ -56,25 +56,25 @@
     //                  SMOG Index: 8.3             8.3                     8.3
     self.testString2 = @"Four score and seven years ago our fathers brought forth on this continent a new nation, conceived in liberty, and dedicated to the proposition that all men are created equal. Now we are engaged in a great civil war, testing whether that nation, or any nation so conceived and so dedicated, can long endure. We are met on a great battlefield of that war. We have come to dedicate a portion of that field, as a final resting place for those who here gave their lives that that nation might live. It is altogether fitting and proper that we should do this. But, in a larger sense, we can not dedicate, we can not consecrate, we can not hallow this ground. The brave men, living and dead, who struggled here, have consecrated it, far above our poor power to add or detract. The world will little note, nor long remember what we say here, but it can never forget what they did here. It is for us the living, rather, to be dedicated here to the unfinished work which they who fought here have thus far so nobly advanced. It is rather for us to be here dedicated to the great task remaining before us -- that from these honored dead we take increased devotion to that cause for which they gave the last full measure of devotion -- that we here highly resolve that these dead shall not have died in vain -- that this nation, under God, shall have a new birth of freedom -- and that government of the people, by the people, for the people, shall not perish from the earth.";
     
-    self.readability = [[Readability_iOS alloc] init];
+    self.readability = [[Readability alloc] init];
 }
 
 #pragma mark - Readability_iOS
 
 - (void)testReadabilityString1 {
-    XCTAssert([Readability_iOS automatedReadabilityIndexForString:self.testString1].doubleValue == 9.7);
-    XCTAssert([Readability_iOS fleschKincaidGradeLevelForString:self.testString1].doubleValue == 13.1);
-    XCTAssert([Readability_iOS fleschReadingEaseForString:self.testString1].doubleValue == 24.4);
-    XCTAssert([Readability_iOS gunningFogScoreForString:self.testString1].doubleValue == 14.4);
-    XCTAssert([Readability_iOS smogIndexForString:self.testString1].doubleValue == 11.6);
+    XCTAssert([Readability automatedReadabilityIndexForString:self.testString1].doubleValue == 9.7);
+    XCTAssert([Readability fleschKincaidGradeLevelForString:self.testString1].doubleValue == 13.1);
+    XCTAssert([Readability fleschReadingEaseForString:self.testString1].doubleValue == 24.4);
+    XCTAssert([Readability gunningFogScoreForString:self.testString1].doubleValue == 14.4);
+    XCTAssert([Readability smogIndexForString:self.testString1].doubleValue == 11.6);
 }
 
 - (void)testReadabilityString2 {
-    XCTAssert([Readability_iOS automatedReadabilityIndexForString:self.testString2].doubleValue == 12.1);
-    XCTAssert([Readability_iOS fleschKincaidGradeLevelForString:self.testString2].doubleValue == 11.0); // TODO optimize
-    XCTAssert([Readability_iOS fleschReadingEaseForString:self.testString2].doubleValue == 64.8); // TODO optimize
-    XCTAssert([Readability_iOS gunningFogScoreForString:self.testString2].doubleValue == 12.6); // TODO optimize
-    XCTAssert([Readability_iOS smogIndexForString:self.testString2].doubleValue == 8.3);
+    XCTAssert([Readability automatedReadabilityIndexForString:self.testString2].doubleValue == 12.1);
+    XCTAssert([Readability fleschKincaidGradeLevelForString:self.testString2].doubleValue == 11.0); // TODO optimize
+    XCTAssert([Readability fleschReadingEaseForString:self.testString2].doubleValue == 64.8); // TODO optimize
+    XCTAssert([Readability gunningFogScoreForString:self.testString2].doubleValue == 12.6); // TODO optimize
+    XCTAssert([Readability smogIndexForString:self.testString2].doubleValue == 8.3);
 }
 
 - (void)testRoundFloat {

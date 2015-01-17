@@ -1,6 +1,6 @@
 //
-//  Flesch–Kincaid-iOS.h
-//  Flesch–Kincaid-iOS Example
+//  Readability.h
+//  Readability-Objective-C Example
 //
 //  Created by Bracken Spencer <bracken.spencer@gmail.com>.
 //  Copyright (c) 2014-2015 Bracken Spencer. All rights reserved.
@@ -8,7 +8,7 @@
 
 @import Foundation;
 
-@interface Readability_iOS : NSObject
+@interface Readability : NSObject
 
 + (NSDecimalNumber *)automatedReadabilityIndexForString:(NSString *)string; // Automated Readability Index
 + (NSDecimalNumber *)fleschKincaidGradeLevelForString:(NSString *)string; // Flesch-Kincaid Grade Level

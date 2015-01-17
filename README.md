@@ -5,7 +5,7 @@ Metrics to determine readability and comprehension difficulty for contemporary E
 
 * The **Smalltalk** version is **[here](https://github.com/bracken-dev/Readability-Smalltalk)**.
 * The **Swift** version is **[here](https://github.com/bracken-dev/Readability-Swift)**.
-* Unit tests are included.
+* Example app and unit tests are included.
 
 ##### Formulas Included
 

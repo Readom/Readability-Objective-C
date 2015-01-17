@@ -1,6 +1,6 @@
 //
 //  AppDelegate.m
-//  Readability-iOS Example
+//  Readability-Objective-C Example
 //
 //  Created by Bracken Spencer <bracken.spencer@gmail.com>.
 //  Copyright (c) 2014-2015 Bracken Spencer. All rights reserved.

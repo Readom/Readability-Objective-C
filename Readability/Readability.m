@@ -1,19 +1,19 @@
 //
-//  Flesch–Kincaid-iOS.m
-//  Flesch–Kincaid-iOS Example
+//  Readability.m
+//  Readability-Objective-C Example
 //
 //  Created by Bracken Spencer <bracken.spencer@gmail.com>.
 //  Copyright (c) 2014-2015 Bracken Spencer. All rights reserved.
 //
 
-#import "Readability_iOS.h"
+#import "Readability.h"
 #import <UIKit/UIKit.h>
 #import "SyllableCounter.h"
 
-@implementation Readability_iOS
+@implementation Readability
 
 + (NSDecimalNumber *)automatedReadabilityIndexForString:(NSString *)string {
-    Readability_iOS *readability = [[Readability_iOS alloc] init];
+    Readability *readability = [[Readability alloc] init];
     
     CGFloat totalWords = [readability wordsInString:string];
     CGFloat totalSentences = [readability sentencesInString:string];
@@ -26,7 +26,7 @@
 }
 
 + (NSDecimalNumber *)fleschKincaidGradeLevelForString:(NSString *)string {
-    Readability_iOS *readability = [[Readability_iOS alloc] init];
+    Readability *readability = [[Readability alloc] init];
     
     CGFloat totalWords = [readability wordsInString:string];
     CGFloat totalSentences = [readability sentencesInString:string];
@@ -40,7 +40,7 @@
 }
 
 + (NSDecimalNumber *)fleschReadingEaseForString:(NSString *)string {
-    Readability_iOS *readability = [[Readability_iOS alloc] init];
+    Readability *readability = [[Readability alloc] init];
     
     CGFloat totalWords = [readability wordsInString:string];
     CGFloat totalSentences = [readability sentencesInString:string];
@@ -54,7 +54,7 @@
 }
 
 + (NSDecimalNumber *)gunningFogScoreForString:(NSString *)string {
-    Readability_iOS *readability = [[Readability_iOS alloc] init];
+    Readability *readability = [[Readability alloc] init];
     
     CGFloat totalWords = [readability wordsInString:string];
     CGFloat totalSentences = [readability sentencesInString:string];
@@ -67,7 +67,7 @@
 }
 
 + (NSDecimalNumber *)smogIndexForString:(NSString *)string {
-    Readability_iOS *readability = [[Readability_iOS alloc] init];
+    Readability *readability = [[Readability alloc] init];
     
     CGFloat totalSentences = [readability sentencesInString:string];
     CGFloat totalPolysyllables = [readability polysyllableWordsInString:string excludeCommonSuffixes:NO];
@@ -94,13 +94,13 @@
 }
 
 - (NSUInteger)wordsInString:(NSString *)string {
-    Readability_iOS *readability = [[Readability_iOS alloc] init];
+    Readability *readability = [[Readability alloc] init];
     
     return [readability count:NSStringEnumerationByWords inString:string];
 }
 
 - (NSUInteger)sentencesInString:(NSString *)string {
-    Readability_iOS *readability = [[Readability_iOS alloc] init];
+    Readability *readability = [[Readability alloc] init];
     
     return [readability count:NSStringEnumerationBySentences inString:string];
 }
@@ -124,7 +124,7 @@
 }
 
 - (NSString *)alphanumericString:(NSString *)string {
-    Readability_iOS *readability = [[Readability_iOS alloc] init];
+    Readability *readability = [[Readability alloc] init];
     
     NSCharacterSet *charactersToRemove = [NSCharacterSet alphanumericCharacterSet].invertedSet;
     NSString *charactersRemoved = [[string componentsSeparatedByCharactersInSet:charactersToRemove] componentsJoinedByString:@" "];
@@ -164,7 +164,7 @@
 }
 
 - (NSUInteger)polysyllableWordsInString:(NSString *)string excludeCommonSuffixes:(BOOL)excludeCommonSuffixes {
-    Readability_iOS *readability = [[Readability_iOS alloc] init];
+    Readability *readability = [[Readability alloc] init];
     
     __block NSUInteger count = 0;
     
@@ -186,7 +186,7 @@
 }
 
 - (NSUInteger)complexWordsInString:(NSString *)string {
-    Readability_iOS *readability = [[Readability_iOS alloc] init];
+    Readability *readability = [[Readability alloc] init];
     
     __block NSUInteger count = 0;
     

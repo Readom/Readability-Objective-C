@@ -1,13 +1,13 @@
 //
 //  ViewController.m
-//  Readability-iOS Example
+//  Readability-Objective-C Example
 //
 //  Created by Bracken Spencer <bracken.spencer@gmail.com>.
 //  Copyright (c) 2014-2015 Bracken Spencer. All rights reserved.
 //
 
 #import "ViewController.h"
-#import "Readability_iOS.h"
+#import "Readability.h"
 
 @interface ViewController () <UITextViewDelegate>
 
@@ -32,11 +32,11 @@
 
 - (void)textViewDidChange:(UITextView *)textView {
     if (textView.text.length) {
-        NSDecimalNumber *automatedReadabilityIndex = [Readability_iOS automatedReadabilityIndexForString:self.textView.text];
-        NSDecimalNumber *fleschKincaidGradeLevel = [Readability_iOS fleschKincaidGradeLevelForString:self.textView.text];
-        NSDecimalNumber *fleschReadingEase = [Readability_iOS fleschReadingEaseForString:self.textView.text];
-        NSDecimalNumber *gunningFogScore = [Readability_iOS gunningFogScoreForString:self.textView.text];
-        NSDecimalNumber *smogIndex = [Readability_iOS smogIndexForString:self.textView.text];
+        NSDecimalNumber *automatedReadabilityIndex = [Readability automatedReadabilityIndexForString:self.textView.text];
+        NSDecimalNumber *fleschKincaidGradeLevel = [Readability fleschKincaidGradeLevelForString:self.textView.text];
+        NSDecimalNumber *fleschReadingEase = [Readability fleschReadingEaseForString:self.textView.text];
+        NSDecimalNumber *gunningFogScore = [Readability gunningFogScoreForString:self.textView.text];
+        NSDecimalNumber *smogIndex = [Readability smogIndexForString:self.textView.text];
         
         [self.automatedReadabilityIndexLabel setText:[NSString stringWithFormat:@"%@", automatedReadabilityIndex]];
         [self.fleschKincaidGradeLevelLabel setText:[NSString stringWithFormat:@"%@", fleschKincaidGradeLevel]];
