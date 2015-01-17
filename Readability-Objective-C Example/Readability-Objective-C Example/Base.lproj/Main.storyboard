@@ -86,7 +86,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SMOG Index:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rnP-h3-sOf">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SMOG Grade:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rnP-h3-sOf">
                                 <rect key="frame" x="16" y="165" width="228" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -108,7 +108,7 @@
                         <outlet property="fleschKincaidGradeLevelLabel" destination="2Eu-IT-UXm" id="i4n-66-96J"/>
                         <outlet property="fleschReadingEaseLabel" destination="MVY-xb-5QF" id="Uju-nk-482"/>
                         <outlet property="gunningFogScoreLabel" destination="Xlt-Me-Rzc" id="uAC-b1-464"/>
-                        <outlet property="smogIndexLabel" destination="u3U-jS-5Xs" id="zU2-4m-gPm"/>
+                        <outlet property="smogGradeLabel" destination="u3U-jS-5Xs" id="4At-71-XG9"/>
                         <outlet property="textView" destination="m4o-UY-4Rb" id="OmT-TF-4YO"/>
                     </connections>
                 </viewController>

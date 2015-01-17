@@ -17,7 +17,7 @@
 @property (nonatomic, weak) IBOutlet UILabel *fleschReadingEaseLabel;
 @property (nonatomic, weak) IBOutlet UILabel *fleschKincaidGradeLevelLabel;
 @property (nonatomic, weak) IBOutlet UILabel *gunningFogScoreLabel;
-@property (nonatomic, weak) IBOutlet UILabel *smogIndexLabel;
+@property (nonatomic, weak) IBOutlet UILabel *smogGradeLabel;
 
 @end
 
@@ -38,21 +38,21 @@
         NSDecimalNumber *fleschKincaidGradeLevel = [Readability fleschKincaidGradeLevelForString:self.textView.text];
         NSDecimalNumber *fleschReadingEase = [Readability fleschReadingEaseForString:self.textView.text];
         NSDecimalNumber *gunningFogScore = [Readability gunningFogScoreForString:self.textView.text];
-        NSDecimalNumber *smogIndex = [Readability smogIndexForString:self.textView.text];
+        NSDecimalNumber *smogGrade = [Readability smogGradeForString:self.textView.text];
         
         [self.automatedReadabilityIndexLabel setText:[NSString stringWithFormat:@"%@", automatedReadabilityIndex]];
         [self.colemanLiauIndexLabel setText:[NSString stringWithFormat:@"%@", colemanLiauIndex]];
         [self.fleschKincaidGradeLevelLabel setText:[NSString stringWithFormat:@"%@", fleschKincaidGradeLevel]];
         [self.fleschReadingEaseLabel setText:[NSString stringWithFormat:@"%@", fleschReadingEase]];
         [self.gunningFogScoreLabel setText:[NSString stringWithFormat:@"%@", gunningFogScore]];
-        [self.smogIndexLabel setText:[NSString stringWithFormat:@"%@", smogIndex]];
+        [self.smogGradeLabel setText:[NSString stringWithFormat:@"%@", smogGrade]];
     } else {
         [self.automatedReadabilityIndexLabel setText:@"N/A"];
         [self.colemanLiauIndexLabel setText:@"N/A"];
         [self.fleschKincaidGradeLevelLabel setText:@"N/A"];
         [self.fleschReadingEaseLabel setText:@"N/A"];
         [self.gunningFogScoreLabel setText:@"N/A"];
-        [self.smogIndexLabel setText:@"N/A"];
+        [self.smogGradeLabel setText:@"N/A"];
     }
 }
 

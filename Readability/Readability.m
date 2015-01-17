@@ -79,7 +79,7 @@
     return [readability roundFloat:score places:1];
 }
 
-+ (NSDecimalNumber *)smogIndexForString:(NSString *)string {
++ (NSDecimalNumber *)smogGradeForString:(NSString *)string {
     Readability *readability = [[Readability alloc] init];
     
     CGFloat totalSentences = [readability sentencesInString:string];

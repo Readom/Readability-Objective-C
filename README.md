@@ -14,7 +14,7 @@ Metrics to determine readability and comprehension difficulty for contemporary E
 * [Flesch-Kincaid Grade Level](http://en.wikipedia.org/wiki/Flesch–Kincaid_readability_tests)
 * [Flesch Reading Ease](http://en.wikipedia.org/wiki/Flesch–Kincaid_readability_tests)
 * [Gunning Fog Index](http://en.wikipedia.org/wiki/Gunning_fog_index)
-* [SMOG Index](http://en.wikipedia.org/wiki/SMOG)
+* [SMOG Grade](http://en.wikipedia.org/wiki/SMOG)
 
 ### Dependencies
 

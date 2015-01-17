@@ -11,7 +11,7 @@
 //  Flesch-Kincaid Grade Level: fleschKincaidGradeLevelForString
 //         Flesch Reading Ease: fleschReadingEaseForString
 //           Gunning Fog Index: gunningFogScoreForString
-//                  SMOG Index: smogIndexForString
+//                  SMOG Grade: smogGradeForString
 
 @import Foundation;
 
@@ -22,6 +22,6 @@
 + (NSDecimalNumber *)fleschKincaidGradeLevelForString:(NSString *)string;
 + (NSDecimalNumber *)fleschReadingEaseForString:(NSString *)string;
 + (NSDecimalNumber *)gunningFogScoreForString:(NSString *)string;
-+ (NSDecimalNumber *)smogIndexForString:(NSString *)string;
++ (NSDecimalNumber *)smogGradeForString:(NSString *)string;
 
 @end
