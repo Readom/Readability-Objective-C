@@ -7,7 +7,7 @@ Metrics to determine readability and comprehension difficulty for contemporary E
 * **Smalltalk** version **[available](http://bracken-dev.github.io/Readability-Smalltalk)**.
 * **Swift** version **[available](http://bracken-dev.github.io/Readability-Swift)**.
 
-##### Formulas Included
+##### Metrics Included
 
 * [Automated Readability Index](http://en.wikipedia.org/wiki/Automated_Readability_Index)
 * [Coleman–Liau Index](http://en.wikipedia.org/wiki/Coleman–Liau_index)
