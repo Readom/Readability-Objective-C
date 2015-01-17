@@ -1,9 +1,10 @@
-Readability-iOS
-===============
+Readability-Objective-C
+=======================
 
-iOS tools to test readability and comprehension difficulty for contemporary English text.
+Metrics to determine readability and comprehension difficulty for contemporary English text.
 
-* The Swift version is [here](https://github.com/bracken-dev/Readability-iOS-Swift).
+* The Smalltalk version is [here](https://github.com/bracken-dev/Readability-Smalltalk).
+* The Swift version is [here](https://github.com/bracken-dev/Readability-Swift).
 * Unit tests are included.
 
 ##### Formulas Included
