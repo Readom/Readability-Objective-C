@@ -6,7 +6,8 @@
 //  Copyright (c) 2014-2015 Bracken Spencer. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
+
 #import "REAppDelegate.h"
 
 int main(int argc, char * argv[]) {
