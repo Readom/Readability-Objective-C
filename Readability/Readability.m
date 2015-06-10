@@ -6,8 +6,9 @@
 //  Copyright (c) 2014-2015 Bracken Spencer. All rights reserved.
 //
 
+@import UIKit;
+
 #import "Readability.h"
-#import <UIKit/UIKit.h>
 #import "SyllableCounter.h"
 
 @implementation Readability
