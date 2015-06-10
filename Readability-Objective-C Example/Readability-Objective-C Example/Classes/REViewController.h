@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  REViewController.h
 //  Readability-Objective-C Example
 //
 //  Created by Bracken Spencer <bracken.spencer@gmail.com>.
@@ -8,7 +8,7 @@
 
 @import UIKit;
 
-@interface ViewController : UIViewController
+@interface REViewController : UIViewController
 
 @end
 

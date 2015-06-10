@@ -7,17 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C915919A1B289427000AEAAB /* REAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C91591961B289427000AEAAB /* REAppDelegate.m */; };
+		C915919C1B289427000AEAAB /* REViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C91591981B289427000AEAAB /* REViewController.m */; };
 		C940358719E9880300388A4B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C940358619E9880300388A4B /* main.m */; };
-		C940358A19E9880300388A4B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C940358919E9880300388A4B /* AppDelegate.m */; };
-		C940358D19E9880300388A4B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C940358C19E9880300388A4B /* ViewController.m */; };
 		C940359019E9880300388A4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C940358E19E9880300388A4B /* Main.storyboard */; };
 		C940359219E9880300388A4B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C940359119E9880300388A4B /* Images.xcassets */; };
 		C940359519E9880300388A4B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C940359319E9880300388A4B /* LaunchScreen.xib */; };
 		C94035A119E9880300388A4B /* Readability_Objective_C_ExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C94035A019E9880300388A4B /* Readability_Objective_C_ExampleTests.m */; };
 		C9F5A68519EC5C1600F85CC7 /* Readability.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F5A68219EC5C1600F85CC7 /* Readability.m */; };
 		C9F5A68619EC5C1600F85CC7 /* Readability.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F5A68219EC5C1600F85CC7 /* Readability.m */; };
-		C9F5A69219EC66F700F85CC7 /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F5A68B19EC66F700F85CC7 /* RegexKitLite.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		C9F5A69319EC66F700F85CC7 /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F5A68B19EC66F700F85CC7 /* RegexKitLite.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C9F5A69219EC66F700F85CC7 /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F5A68B19EC66F700F85CC7 /* RegexKitLite.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w"; }; };
+		C9F5A69319EC66F700F85CC7 /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F5A68B19EC66F700F85CC7 /* RegexKitLite.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w"; }; };
 		C9F5A69619EC66F700F85CC7 /* SyllableCounter.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F5A68D19EC66F700F85CC7 /* SyllableCounter.m */; };
 		C9F5A69719EC66F700F85CC7 /* SyllableCounter.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F5A68D19EC66F700F85CC7 /* SyllableCounter.m */; };
 		C9F5A69919EC670100F85CC7 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C9F5A69819EC670100F85CC7 /* libicucore.dylib */; };
@@ -35,13 +35,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C91591951B289427000AEAAB /* REAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj.h; path = REAppDelegate.h; sourceTree = "<group>"; };
+		C91591961B289427000AEAAB /* REAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REAppDelegate.m; sourceTree = "<group>"; };
+		C91591971B289427000AEAAB /* REViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj.h; path = REViewController.h; sourceTree = "<group>"; };
+		C91591981B289427000AEAAB /* REViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REViewController.m; sourceTree = "<group>"; };
 		C940358119E9880300388A4B /* Readability-Objective-C Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Readability-Objective-C Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C940358519E9880300388A4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		C940358619E9880300388A4B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		C940358819E9880300388A4B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		C940358919E9880300388A4B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		C940358B19E9880300388A4B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		C940358C19E9880300388A4B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		C940358F19E9880300388A4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C940359119E9880300388A4B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C940359419E9880300388A4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -79,6 +79,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C91591941B289427000AEAAB /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				C91591951B289427000AEAAB /* REAppDelegate.h */,
+				C91591961B289427000AEAAB /* REAppDelegate.m */,
+				C91591971B289427000AEAAB /* REViewController.h */,
+				C91591981B289427000AEAAB /* REViewController.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		C940357819E9880300388A4B = {
 			isa = PBXGroup;
 			children = (
@@ -103,14 +114,11 @@
 		C940358319E9880300388A4B /* Readability-Objective-C Example */ = {
 			isa = PBXGroup;
 			children = (
-				C940358819E9880300388A4B /* AppDelegate.h */,
-				C940358919E9880300388A4B /* AppDelegate.m */,
+				C91591941B289427000AEAAB /* Classes */,
 				C940359119E9880300388A4B /* Images.xcassets */,
 				C940359319E9880300388A4B /* LaunchScreen.xib */,
 				C940358E19E9880300388A4B /* Main.storyboard */,
 				C940358419E9880300388A4B /* Supporting Files */,
-				C940358B19E9880300388A4B /* ViewController.h */,
-				C940358C19E9880300388A4B /* ViewController.m */,
 			);
 			path = "Readability-Objective-C Example";
 			sourceTree = "<group>";
@@ -275,8 +283,8 @@
 				C9F5A68519EC5C1600F85CC7 /* Readability.m in Sources */,
 				C9F5A69619EC66F700F85CC7 /* SyllableCounter.m in Sources */,
 				C9F5A69219EC66F700F85CC7 /* RegexKitLite.m in Sources */,
-				C940358D19E9880300388A4B /* ViewController.m in Sources */,
-				C940358A19E9880300388A4B /* AppDelegate.m in Sources */,
+				C915919C1B289427000AEAAB /* REViewController.m in Sources */,
+				C915919A1B289427000AEAAB /* REAppDelegate.m in Sources */,
 				C940358719E9880300388A4B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

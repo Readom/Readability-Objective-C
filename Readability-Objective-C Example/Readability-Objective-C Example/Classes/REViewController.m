@@ -1,15 +1,15 @@
 //
-//  ViewController.m
+//  REViewController.m
 //  Readability-Objective-C Example
 //
 //  Created by Bracken Spencer <bracken.spencer@gmail.com>.
 //  Copyright (c) 2014-2015 Bracken Spencer. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "REViewController.h"
 #import "Readability.h"
 
-@interface ViewController () <UITextViewDelegate>
+@interface REViewController () <UITextViewDelegate>
 
 @property (nonatomic, weak) IBOutlet UITextView *textView;
 @property (nonatomic, weak) IBOutlet UILabel *automatedReadabilityIndexLabel;
@@ -21,7 +21,7 @@
 
 @end
 
-@implementation ViewController
+@implementation REViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
