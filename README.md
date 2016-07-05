@@ -3,13 +3,7 @@ Readability-Objective-C
 
 Metrics to determine readability and comprehension difficulty for contemporary English text.
 
-<<<<<<< HEAD
 * Example iOS app and unit tests included
-=======
-* Example app and unit tests included
-* **Smalltalk** version **[available](http://bracken-dev.github.io/Readability-Smalltalk)**
-* **Swift** version **[available](http://bracken-dev.github.io/Readability-Swift)**
->>>>>>> b1892a4378a2730f26cb85102fac559c78e371be
 
 ### Other Versions Available
 
