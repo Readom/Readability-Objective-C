@@ -224,7 +224,7 @@
 		C940357919E9880300388A4B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0600;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Bracken Spencer";
 				TargetAttributes = {
 					C940358019E9880300388A4B = {
@@ -350,6 +350,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -415,6 +416,7 @@
 				INFOPLIST_FILE = "Readability-Objective-C Example/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.modernmobileworks.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "Readability-Objective-C Example";
 				SWIFT_OBJC_BRIDGING_HEADER = "Readability-Objective-C Example-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -430,6 +432,7 @@
 				INFOPLIST_FILE = "Readability-Objective-C Example/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.modernmobileworks.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "Readability-Objective-C Example";
 				SWIFT_OBJC_BRIDGING_HEADER = "Readability-Objective-C Example-Bridging-Header.h";
 			};
@@ -440,13 +443,11 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				INFOPLIST_FILE = "Readability-Objective-C ExampleTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.modernmobileworks.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "Readability-Objective-C ExampleTests";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Readability-Objective-C Example.app/Readability-Objective-C Example";
 			};
@@ -457,12 +458,10 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "Readability-Objective-C ExampleTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.modernmobileworks.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "Readability-Objective-C ExampleTests";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Readability-Objective-C Example.app/Readability-Objective-C Example";
 			};
