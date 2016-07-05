@@ -7,9 +7,9 @@ Metrics to determine readability and comprehension difficulty for contemporary E
 
 ### Other Versions Available
 
-* [Pharo/Smalltalk](http://bracken-dev.github.io/Readability-Pharo/)
-* [iOS/Swift](http://bracken-dev.github.io/Readability-Swift/)
-* [VisualWorks/Smalltalk](http://bracken-dev.github.io/Readability-VisualWorks/)
+* [Pharo/Smalltalk](http://bit.ly/29uEHVM)
+* [iOS/Swift](http://bit.ly/29uEbqH)
+* [VisualWorks/Smalltalk](http://bit.ly/29goaE7)
 
 ### Metrics Included
 
@@ -22,7 +22,7 @@ Metrics to determine readability and comprehension difficulty for contemporary E
 
 ### Dependencies
 
-* [objC-syllable-counter](https://github.com/bracken-dev/objC-syllable-counter.git) with RegexKitLite (included) and libicucore
+* [objC-syllable-counter](https://github.com/brackendev/objC-syllable-counter.git) with RegexKitLite (included) and libicucore
 
 ### Usage
 
