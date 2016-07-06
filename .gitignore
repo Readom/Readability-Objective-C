@@ -21,5 +21,4 @@ Podfile.lock
 .idea/
 xcuserdata/
 project.xcworkspace/
-Readability-iOS Example/Readability-iOS\ Example.xcodeproj/xcuserdata/
-Readability-iOS Example/Readability-iOS\ Example.xcodeproj/project.xcworkspace/
+xcuserdata/
