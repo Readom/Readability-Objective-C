@@ -8,12 +8,6 @@ Metrics to determine readability and comprehension difficulty for contemporary E
 
 * Example iOS app and unit tests included
 
-### Other Versions Available
-
-* [Pharo/Smalltalk](http://bit.ly/29uEHVM)
-* [iOS/Swift](http://bit.ly/29uEbqH)
-* [VisualWorks/Smalltalk](http://bit.ly/29goaE7)
-
 ### Metrics Included
 
 * [Automated Readability Index](http://en.wikipedia.org/wiki/Automated_Readability_Index)
@@ -30,6 +24,12 @@ Metrics to determine readability and comprehension difficulty for contemporary E
 ### Usage
 
 See included example application.
+
+### Ports
+
+* [Pharo/Smalltalk](http://bit.ly/29uEHVM)
+* [iOS/Swift](http://brackendev.github.io/Readability-Swift/)
+* [VisualWorks/Smalltalk](https://brackendev.github.io/Readability-VisualWorks/)
 
 ### Author
 
