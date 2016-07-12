@@ -1,6 +1,6 @@
 Readability-Objective-C
 =======================
-[![](https://img.shields.io/badge/language-Objective--C-orange.svg?style=flat-square)](https://en.wikipedia.org/wiki/Objective-C/)
+[![](https://img.shields.io/badge/language-Objective--C-orange.svg?style=flat-square)](https://en.wikipedia.org/wiki/Objective-C)
 [![](https://img.shields.io/badge/platform-iOS-lightgrey.svg?style=flat-square)](http://www.apple.com/ios/)
 [![](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://opensource.org/licenses/MIT/)
 
@@ -27,7 +27,7 @@ See included example application.
 
 ### Ports
 
-* [Pharo/Smalltalk](http://bit.ly/29uEHVM)
+* [Pharo/Smalltalk](http://brackendev.github.io/Readability-Pharo/)
 * [iOS/Swift](http://brackendev.github.io/Readability-Swift/)
 * [VisualWorks/Smalltalk](https://brackendev.github.io/Readability-VisualWorks/)
 
